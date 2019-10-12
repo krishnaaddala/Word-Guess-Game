@@ -12,9 +12,15 @@ document.onkeyup = function(event) {
     var computerGuess = computerChoice[Math.floor(Math.random()*computerChoice.length)];
     console.log(computerGuess);
     if (userGuess===computerGuess){
-        
+        consol.log("You win!");
         wins++;
-
+        //Create guessesLeftReset(); --> to reset the game
+    }
+    else {
+        losses++;
+        if (guessesLeft<0){
+        guessesLeft--;
+        }
     }
 }
 //function for user guess
