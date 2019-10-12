@@ -4,9 +4,20 @@ var losses = 0;
 //set the variable to max number of guesses
 var guessesLeft = 9;
 //create an Array with the list of letters A-Z
-var lettersChosen = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var computerChoice = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 //create a function for onKeyUp
-//functyion for my guess
+document.onkeyup = function(event) {
+    var userGuess = event.key;
+    console.log(userGuess);
+    var computerGuess = computerChoice[Math.floor(Math.random()*computerChoice.length)];
+    console.log(computerGuess);
+    if (userGuess===computerGuess){
+        
+        wins++;
+
+    }
+}
+//function for user guess
 //function for computer guess
 //function compare the guess
     //within compare function do the comparison for win or loss
@@ -14,17 +25,6 @@ var lettersChosen = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o"
 //&& if guessleft ==0 reset the guessleft and increment losses by 1
 //actively concatenate and print on the screen
 //reset the game when user looses or wins
-
-    $("#yourGuess").on("keyup", function(){
-        for (i=0, i<10; i++;){
-            
-        var showChosenLetter = $("<div>");
-        showChosenLetter.attr("class", "letter letter-clicked")
-        }
-        
-
-        console.log("#userGuess");
-    });
 
 //create a function to guessing letters 
 // function userGuess(){
