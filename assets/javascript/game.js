@@ -10,7 +10,6 @@ function guessesLeftReset() {
     guessesLeft = 9;
     guessesChoice = [];
 }
-
 //create an Array with the list of letters A-Z
 var computerChoice = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 //create variables to display on the HTML page
@@ -29,7 +28,6 @@ document.onkeyup = function(event) {
     guessesLeft--;
     //if usechoice === computerchoice increment wins++
     if (userGuess.toUpperCase()===computerGuess.toUpperCase()){
-        console.log("You win!");
         wins++;
         guessesLeftReset();
     }
@@ -41,8 +39,8 @@ document.onkeyup = function(event) {
         }
     }
     //Display Wins/Losses/NumberOfGuessesLeft/ListofGuessesUserMade on the HTML page
-    numberOfWins.textContent = "Wins:" + wins;
-    numberOfLosses.textContent = "Losses:" + losses;
-    guessLeft.textContent = "Number of Guesses Left:" + guessesLeft;
-    userMadeTheChoice.textContent = "List your Guesses:" + guessesChoice;
+    numberOfWins.textContent = "Wins :" + wins;
+    numberOfLosses.textContent = "Losses :" + losses;
+    guessLeft.textContent = "Number of Guesses Left :" + guessesLeft;
+    userMadeTheChoice.textContent = "List your Guesses :" + guessesChoice;
 }
